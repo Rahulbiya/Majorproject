@@ -35,14 +35,11 @@ const Welcome = () => {
 
   return (
     <div className="flex w-full justify-center items-center">
-      <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4">
-        <div className="flex flex-1 justify-start items-start flex-col mf:mr-10">
-          <h1 className="text-3xl sm:text-5xl text-white text-gradient py-1">
-            Send Crypto <br /> with ease anywhere anytime.
+      <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4 w-full">
+        <div className="flex flex-1 justify-start items-start flex-col mf:mr-8">
+          <h1 className="text-8xl  text-white text-gradient py-1">
+            Send Crypto <br /> across the world.
           </h1>
-          <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
-            Simple UI and easy to use.
-          </p>
           {!currentAccount && (
             <button
               type="button"
@@ -56,29 +53,9 @@ const Welcome = () => {
             </button>
           )}
 
-        <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
-          <div className="rounded-tl-2xl bg-gray-800 p-4 text-gray-200">
-            Simple
-          </div>
-          <div className="bg-gray-700 p-4 text-gray-200">
-            Privacy
-          </div>
-          <div className="sm:rounded-tr-2xl bg-gray-800 p-4 text-gray-200">
-            Decentralization
-          </div>
-          <div className="sm:rounded-bl-2xl bg-gray-700 p-4 text-gray-200">
-            QR payment
-          </div>
-          <div className="bg-gray-800 p-4 text-gray-200">
-            efficient
-          </div>
-          <div className="rounded-br-2xl bg-gray-700 p-4 text-gray-200">
-            Transparency
-          </div>
-        </div>
         </div>
 
-        <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10">
+        <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10 ml-50">
           <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card .white-glassmorphism ">
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
