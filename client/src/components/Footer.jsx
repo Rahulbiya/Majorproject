@@ -3,7 +3,7 @@ import React from "react";
 // import logo from "../../images/logo.png";
 
 const Footer = () => (
-<div className="w-full p-4 gradient-bg-footer">
+<div className="w-full p-4 gradient-bg-footer bg-gradient-to-bl from-black to-black">
   <div className="w-full flex justify-between items-center flex-col sm:flex-row flex-wrap my-4">
     <div className="flex items-center">
       {/* Your logo image goes here */}
