@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^1.6.5",
     "dependencies": "^0.0.1",
-    "ethers": "^6.8.0",
+    "ethers": "^5.7.2",
     "qrcode.react": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

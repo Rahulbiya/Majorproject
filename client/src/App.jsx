@@ -12,12 +12,13 @@ const App = () => {
     <div className='min-h-screen'>
       <div className='bg-gradient-to-bl from-orange-900 via-black to-black'>
         <Navbar/>
-      {/* <CryptoPriceTracker/> */}
+     
         <Welcome/>
       </div>
       <Services/>
       {/* <div className="bg-gray-100 min-h-screen flex items-center justify-center"> */}
       {/* <Market /> */}
+       <CryptoPriceTracker/>
       </div>
       {/* <Transactions/> */}
       <Mission />
