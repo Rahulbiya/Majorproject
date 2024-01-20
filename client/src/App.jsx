@@ -16,9 +16,8 @@ const App = () => {
         <Welcome/>
       </div>
       <Services/>
-      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+      {/* <div className="bg-gray-100 min-h-screen flex items-center justify-center"> */}
       {/* <Market /> */}
-     
       </div>
       {/* <Transactions/> */}
       <Mission />
