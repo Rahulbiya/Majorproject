@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-
 import { contractABI, contractAddress } from "../utils/constants";
 
 export const TransactionContext = React.createContext();
@@ -21,10 +20,17 @@ export const TransactionsProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [transactionCount, setTransactionCount] = useState(localStorage.getItem("transactionCount"));
   const [transactions, setTransactions] = useState([]);
+  
+  const [data, setData] = useState(""); // Add this line to your state
 
-  const handleChange = (e, name) => {
-    setformData((prevState) => ({ ...prevState, [name]: e.target.value }));
+  const handleChange = (e, name, additionalData) => {
+    if (name === "addressTo") {
+      setformData((prevState) => ({ ...prevState, [name]: additionalData }));
+    } else {
+      setformData((prevState) => ({ ...prevState, [name]: e.target.value }));
+    }
   };
+
 
   const getAllTransactions = async () => {
     try {
