@@ -8,12 +8,12 @@ const Footer = () => (
     <div className="flex items-center">
       {/* Your logo image goes here */}
     </div>
-    <div className="flex-1 justify-evenly items-center mt-5 w-full sm:flex">
+    {/* <div className="flex-1 justify-evenly items-center mt-5 w-full sm:flex">
       <p className="text-white text-base text-center mx-2 cursor-pointer">Wallets</p>
       <p className="text-white text-base text-center mx-2 cursor-pointer">Accounts</p>
       <p className="text-white text-base text-center mx-2 cursor-pointer">Transactions</p>
       <p className="text-white text-base text-center mx-2 cursor-pointer">Exchange</p>
-    </div>
+    </div> */}
   </div>
 
   <div className="flex justify-center items-center flex-col mt-5">
