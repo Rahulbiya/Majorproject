@@ -24,7 +24,18 @@ To install and run the project locally, follow these steps:
 1. Clone the repository: `git clone https://github.com/gaurav9117/techack-Athena.git`
 2. Navigate into the project directory: `cd YOUR_REPOSITORY`
 3. Install the dependencies: `npm install`
-4. Start the server: `npm run dev`
+4. Install qr code scanner: `npm i react-qr-code`
+5. Start the server: `npm run dev`
+6. To add the override configuration to your package.json file in client, you can add the resolutions field. This is how you can do it:
+   `
+   "overrides": {
+    "react-qr-reader": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  }
+`
+
 
 ## Usage
 
