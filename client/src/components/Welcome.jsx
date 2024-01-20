@@ -74,9 +74,9 @@ const Welcome = () => {
     <div className="flex w-full justify-center items-center">
       <div className="flex mf:flex-row flex-col items-start justify-between md:p-20 py-12 px-4 w-full">
         <div className="flex flex-1 justify-start items-start flex-col mf:mr-8">
-          <h1 className="text-8xl  text-white text-gradient py-1">
+          {/* <h1 className="text-8xl  text-white text-gradient py-1">
             Send Crypto <br /> across the world.
-          </h1>
+          </h1> */}
           {!currentAccount && (
             <button
               type="button"
@@ -93,7 +93,7 @@ const Welcome = () => {
         </div>
 
         <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10 ml-50">
-          <div className="p-3 flex justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 card bg-opacity-10 backdrop-blur-md backdrop-brightness-125 border-red-600">
+          <div className="p-3 flex justify-end items-start flex-col rounded-xl h-80 sm:w-72 w-full my-5 card bg-opacity-10 backdrop-blur-md backdrop-brightness-125 border-red-600">
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
@@ -110,25 +110,22 @@ const Welcome = () => {
                 </p>
               </div>
             </div>
-              {/* Display QR code */}
-  <div className="w-full h-40 mt-4">
-    <QRCode value={qrCodeData} />
-  </div>
-          </div>
+              
+          <div className="w-full h-40 mt-4 flex flex-col justify-center items-center">
+          <QRCode value={qrCodeData} />
+            <div>
 
-          <div>
-
-            {/* Scan QR code button */}
+            
             <button
               onClick={() => {
                 setStartScan(!startScan);
               }}
-              className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer"
+              className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer bg-gradient-to-r from-orange-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
             >
               {startScan ? "Stop Scan" : "Start Scan"}
             </button>
 
-            {/* Select camera option */}
+            
             {startScan && (
               <>
                 <select
@@ -139,7 +136,7 @@ const Welcome = () => {
                   <option value={"user"}>Front Camera</option>
                 </select>
 
-                {/* QR code scanner */}
+                
                 <QrReader
                   facingMode={selected}
                   delay={1000}
@@ -149,9 +146,13 @@ const Welcome = () => {
                 />
               </>
             )}
-                  {loadingScan && <p>Loading</p>}
-                  {/* {<p>{data}</p>} */}
-            </div>
+              {loadingScan && <p>Loading</p>}
+                 
+          </div>
+          </div>
+        </div>
+
+          
 
 
             <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
