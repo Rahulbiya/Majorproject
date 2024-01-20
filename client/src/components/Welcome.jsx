@@ -75,7 +75,7 @@ const Welcome = () => {
     <div className="flex flex-col md:flex-row items-start justify-between md:p-20 py-12 px-4 w-full">
       <div className="flex flex-1 justify-start items-start flex-col md:mr-8 ">
         <div className="p-3 flex justify-end items-start flex-col rounded-xl h-80 sm:w-72 w-full card bg-opacity-10 backdrop-blur-md backdrop-brightness-125 border-white-600 md:ml-20 blue-glassmorphism">
-          <div className="flex justify-between flex-col w-full h-full">
+          <div className="flex justify-between flex-col w-full h-full ">
             <div className="flex justify-between items-start">
               <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
                 <SiEthereum fontSize={21} color="#fff" />
