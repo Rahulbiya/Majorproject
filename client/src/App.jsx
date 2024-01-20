@@ -22,7 +22,6 @@ const App = () => {
       {/* <Transactions/> */}
       <Mission />
       <Footer />
-    </div>
   </>
   )
 }
