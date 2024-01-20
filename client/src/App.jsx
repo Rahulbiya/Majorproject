@@ -12,7 +12,7 @@ const App = () => {
     <div className='min-h-screen'>
       <div className='bg-gradient-to-bl from-orange-900 via-black to-black'>
         <Navbar/>
-        <CryptoPriceTracker/>
+      {/* <CryptoPriceTracker/> */}
         <Welcome/>
       </div>
       <Services/>
