@@ -77,23 +77,7 @@ const Welcome = () => {
           {/* <h1 className="text-8xl  text-white text-gradient py-1">
             Send Crypto <br /> across the world.
           </h1> */}
-          {!currentAccount && (
-            <button
-              type="button"
-              onClick={connectWallet}
-              className="flex flex-row justify-center items-center my-5 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd] bg-gradient-to-r from-orange-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
-            >
-              <AiFillPlayCircle className="text-white mr-2" />
-              <p className="text-white text-base font-semibold">
-                Connect Wallet
-              </p>
-            </button>
-          )}
-
-        </div>
-
-        <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10 ml-50">
-          <div className="p-3 flex justify-end items-start flex-col rounded-xl h-80 sm:w-72 w-full my-5 card bg-opacity-10 backdrop-blur-md backdrop-brightness-125 border-red-600">
+          <div className="p-3 flex justify-end items-start flex-col rounded-xl h-80 sm:w-72 w-full  card bg-opacity-10 backdrop-blur-md backdrop-brightness-125 border-red-600 ml-20 ">
             <div className="flex justify-between flex-col w-full h-full">
               <div className="flex justify-between items-start">
                 <div className="w-10 h-10 rounded-full border-2 border-white flex justify-center items-center">
@@ -105,7 +89,7 @@ const Welcome = () => {
                 <p className="text-white font-light text-sm">
                   {shortenAddress(currentAccount)}
                 </p>
-                <p className="text-white font-semibold text-lg mt-1">
+                <p className="text-white font-semibold text-lg mt-1 text-center">
                   Ethereum
                 </p>
               </div>
@@ -120,7 +104,7 @@ const Welcome = () => {
               onClick={() => {
                 setStartScan(!startScan);
               }}
-              className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer bg-gradient-to-r from-orange-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+              className="text-white w-full mt-2 border-[1px] p-3 border-[#3d4f7c] hover:bg-[#3d4f7c] rounded-full cursor-pointer bg-gradient-to-r from-orange-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
             >
               {startScan ? "Stop Scan" : "Start Scan"}
             </button>
@@ -151,13 +135,26 @@ const Welcome = () => {
           </div>
           </div>
         </div>
+          {!currentAccount && (
+            <button
+              type="button"
+              onClick={connectWallet}
+              className="flex flex-row justify-center items-center my-10 bg-[#2952e3] p-3 rounded-full cursor-pointer hover:bg-[#2546bd] bg-gradient-to-r from-orange-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 w-4.5	"
+            >
+              <AiFillPlayCircle className="text-white mr-2" />
+              <p className="text-white text-2xl font-semibold">
+                Connect Wallet
+              </p>
+            </button>
+          )}
 
-          
+        </div>
 
-
-            <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
+        <div className="flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10 ml-50 h-50">
+          <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
             {/* Address To input with QR scanner option */}
             <Input
+          className="py-2"
           placeholder="Address To"
           name="addressTo"
           type="text"
