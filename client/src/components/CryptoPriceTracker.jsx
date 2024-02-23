@@ -124,16 +124,16 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       <header className="bg-gray-800 text-white p-4">
-        <h1 className="text-2xl font-semibold">Crypto Price Tracker</h1>
+        <h1 className="text-2xl font-semibold  flex justify-center">Crypto Price Tracker</h1>
       </header>
 
-      <main className="container mx-auto my-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <main className="container mx-auto  bg-slate-950">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-slate-950 my-4">
   {cryptoData.slice(0, 21).map((crypto) => (
-    <div key={crypto.id} className="bg-black p-4 rounded-lg shadow-md">
-      <h2 className="text-xl font-semibold">{crypto.name}</h2>
+    <div key={crypto.id} className=" p-4 rounded-lg shadow-md bg-slate-800" >
+      <h2 className="text-xl font-semibold text-white">{crypto.name}</h2>
       <p className="text-gray-600">{crypto.symbol}</p>
-      <p className="text-2xl font-bold mt-2">${crypto.priceUsd}</p>
+      <p className="text-2xl font-bold mt-2 text-slate-300">${crypto.priceUsd}</p>
       <p className={crypto.changePercent24Hr >= 0 ? 'text-green-500' : 'text-red-500'}>
         {crypto.changePercent24Hr}%
       </p>
