@@ -4,7 +4,7 @@ import {Navbar , Welcome,Footer,Services} from './components'
 import {Provider}  from 'react-redux'
 import Mission from './components/Mission'
 import CryptoPriceTracker from './components/CryptoPriceTracker'
-
+import MyComponent from './components/test'
 
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
       <Services/>
       {/* <div className="bg-gray-100 min-h-screen flex items-center justify-center"> */}
       {/* <Market /> */}
+      <MyComponent/>
        <CryptoPriceTracker/>
       </div>
       {/* <Transactions/> */}
