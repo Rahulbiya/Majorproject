@@ -22,6 +22,7 @@ const App = () => {
       
       {/* <div className="bg-gray-100 min-h-screen flex items-center justify-center"> */}
       {/* <Market /> */}
+      <MyComponent/>
        <CryptoPriceTracker/>
       </div>
       {/* <Transactions/> */}
