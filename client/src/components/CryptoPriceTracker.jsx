@@ -122,7 +122,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-black">
       <header className="bg-gray-800 text-white p-4">
         <h1 className="text-2xl font-semibold  flex justify-center">Crypto Price Tracker</h1>
       </header>

@@ -80,7 +80,7 @@ function MyComponent() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full px-20 gradient-bg-transactions">
+    <div className="flex flex-col items-center w-full px-20 bg-black">
       {renderTransactions()}
       {data && data.result.length > 6 && (
         <button
