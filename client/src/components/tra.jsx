@@ -52,7 +52,17 @@ function MyComponent() {
       if (!address) return '';
       return address.slice(0, chars) + '...' + address.slice(-chars);
   }
-
+    if (currentAccount === "") {
+    return (
+      <div className="flex justify-center items-center w-full px-20 py-12 gradient-bg-transactions">
+        <div className="flex flex-col p-12">
+          <h1 className="text-white text-3xl text-center my-2">
+            Please connect your wallet
+          </h1>
+        </div>
+      </div>
+    );
+  }
     return (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {transactionsToDisplay.map((item, index) => (
