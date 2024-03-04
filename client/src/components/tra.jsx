@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useContext } from "react";
-// import { TransactionContext } from "../context/TransactionContext";
-// import { shortenAddress } from "../utils/shortenAddress";
+import { TransactionContext } from "../context/TransactionContext";
+import { shortenAddress } from "../utils/shortenAddress";
 
 function MyComponent() {
-  // const { currentAccount } = useContext(TransactionContext);
+  const { currentAccount } = useContext(TransactionContext);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null); // Initialize error state
   const [expanded, setExpanded] = useState(false);
 
   const url = `https://api-goerli.etherscan.io/api?module=account&action=txlist&address=0xd18F36E01c7718907CD52080cff7228c176232bC&startblock=1&offset=10&page=1&sort=desc&apikey=272XCJSQQFIRC4ZSUCY1V6DQXT1D7J4MS6`; // Replace with your actual URL
+
+  //const url = `https://api-goerli.etherscan.io/api?module=account&action=txlist&address=${currentAccount}&startblock=1&offset=10&page=1&sort=desc&apikey=272XCJSQQFIRC4ZSUCY1V6DQXT1D7J4MS6`; 
+
+// console.log('current account', currentAccount);
 
   useEffect(() => {
     fetch(url)
@@ -24,18 +28,20 @@ function MyComponent() {
         setError(error);
       });
   }, []);
-
-  // if (currentAccount === "") {
-  //   return (
-  //     <div className="flex justify-center items-center w-full px-20 py-12 gradient-bg-transactions">
-  //       <div className="flex flex-col p-12">
-  //         <h1 className="text-white text-3xl text-center my-2">
-  //           Please connect your wallet
-  //         </h1>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  
+  // console.log('data',data);
+  
+  if (currentAccount === "") {
+    return (
+      <div className="flex justify-center items-center w-full px-20 py-12 gradient-bg-transactions">
+        <div className="flex flex-col p-12">
+          <h1 className="text-white text-3xl text-center my-2">
+            Please connect your wallet
+          </h1>
+        </div>
+      </div>
+    );
+  }
 
   const renderTransactions = () => {
     if (!data || !data.result) return null;
