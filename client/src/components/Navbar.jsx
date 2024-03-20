@@ -31,6 +31,24 @@ const Navbar = () => {
       });
   }
 
+  //open metamask wallet 
+  const openMetaMask = () => {
+    if (window.ethereum) {
+      window.ethereum.request({ method: 'eth_requestAccounts' })
+        .then(accounts => {
+          // MetaMask is connected and accounts are accessible
+          console.log('MetaMask wallet connected:', accounts);
+        })
+        .catch(error => {
+          // Handle error
+          console.error('Error connecting to MetaMask:', error);
+        });
+    } else {
+      // MetaMask is not installed
+      console.error('MetaMask is not installed');
+    }
+  };
+
   return (
     <nav className="w-full flex md:justify-center justify-between items-center p-4">
     <div className="md:flex-[0.9] flex-initial justify-center items-center">
@@ -40,8 +58,14 @@ const Navbar = () => {
       {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
         <NavBarItem key={item + index} title={item} />
       ))}
+
+      {/* //metamask wallet open  */}
+      <button onClick={openMetaMask}>Wallets</button>
+
       {/* Signout Button */}
-      <NavBarItem title="Sign Out" classprops="cursor-pointer" onClick={handleLogout} />
+      <button onClick={handleLogout}>
+                        Logout
+                    </button>
     </ul>
     
     <div className="flex relative">
@@ -60,6 +84,10 @@ const Navbar = () => {
           {["Market", "Exchange", "Tutorials", "Wallets"].map(
             (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
           )}
+
+           {/* //metamask wallet open  */}
+      <button onClick={openMetaMask}>Wallets</button>
+
           {/* Signout Button */}
           <button onClick={handleLogout}>
                         Logout
