@@ -55,17 +55,23 @@ const Navbar = () => {
       <img src={logo} alt="logo" className="w-32 cursor-pointer" />
     </div>
     <ul className="text-white md:flex hidden list-none flex-row justify-between items-center flex-initial">
-      {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
+      {/* {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
         <NavBarItem key={item + index} title={item} />
-      ))}
+      ))} */}
 
-      {/* //metamask wallet open  */}
-      <button onClick={openMetaMask}>Wallets</button>
+      {/* <button >Market</button>
 
-      {/* Signout Button */}
-      <button onClick={handleLogout}>
-                        Logout
-                    </button>
+      <button>Exchange</button>
+
+      <button>Tutorial</button> */}
+  {/* //metamask wallet open  */}
+  {/* <button onClick={openMetaMask} className="my-2">Wallets</button> */}
+
+{/* Signout Button */}
+<button onClick={handleLogout} className="my-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition duration-300 ease-in-out">
+  Logout
+</button>
+
     </ul>
     
     <div className="flex relative">
@@ -81,9 +87,9 @@ const Navbar = () => {
           flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
         >
           <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-          {["Market", "Exchange", "Tutorials", "Wallets"].map(
+          {/* {["Market", "Exchange", "Tutorials", "Wallets"].map(
             (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
-          )}
+          )} */}
 
            {/* //metamask wallet open  */}
       <button onClick={openMetaMask}>Wallets</button>
