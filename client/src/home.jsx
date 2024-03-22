@@ -9,6 +9,7 @@ import CryptoPriceTracker from './components/CryptoPriceTracker';
 import Mission from './components/Mission';
 import Footer from './components/Footer';
 import MyComponent from './components/tra';
+import ETHPriceConverter from './components/ConvertCurrency';
 
 
 const Home = ()=>{
@@ -20,6 +21,7 @@ const Home = ()=>{
              <Welcome/>
           </div>
           <MyComponent/>
+          <ETHPriceConverter/>
           <Services/>
           <CryptoPriceTracker/>
         </div>
