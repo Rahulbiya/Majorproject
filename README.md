@@ -10,6 +10,13 @@ The main features of the system include:
 - Scanning a QR code to pay.
 - Viewing transaction history.
 
+## Screenshots
+![image](https://github.com/Rahulbiya/Majorproject/assets/83511327/dd1d892f-92e4-4c72-914e-de0ad1365b24)
+![WhatsApp Image 2024-04-05 at 15 46 40_b5472b91](https://github.com/Rahulbiya/Majorproject/assets/83511327/8e14a807-51ff-44a4-99c9-20be758c953f)
+![WhatsApp Image 2024-04-05 at 15 47 00_dccf6740](https://github.com/Rahulbiya/Majorproject/assets/83511327/548d2024-1122-48d7-b769-f54e8b1cfd77)
+![image](https://github.com/Rahulbiya/Majorproject/assets/83511327/44bd8cbc-167d-4fc3-a67f-8017f7a626a3)
+
+
 ## Table of Contents
 
 - [Installation](#installation)
